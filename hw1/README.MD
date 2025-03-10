@@ -15,4 +15,7 @@ pip install -r command.txt
 python -m venv venv
 ```
 
-3. Output: in all_conversation_log_test [:folder:](https://github.com/41171119H/Data-Structure/tree/main/hw1/all_conversation_log_test)
+3. Output: in all_conversation_log_test [:open_file_folder:](https://github.com/41171119H/Data-Structure/tree/main/hw1/all_conversation_log_test)
+
+4. Some Problem:
+My Playwright is having some issues. I've troubleshooted many errors but still haven't resolved them. I'm still working on it:sweat_drops:...
