@@ -1,7 +1,9 @@
 # Data-Structure
 The code for the Data Structure course in the TAHRD
-**授課教師:** 蔡芸琤老師
-**授課系所:** 台師大科技系
+
+- **授課教師:** 蔡芸琤老師
+
+- **授課系所:** 台師大科技系
 
 ## hw1
 - 製作autogen 專案流程圖
