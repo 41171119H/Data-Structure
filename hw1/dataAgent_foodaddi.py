@@ -14,7 +14,7 @@ from autogen_ext.models.openai import OpenAIChatCompletionClient
 from autogen_ext.agents.web_surfer import MultimodalWebSurfer
 
 load_dotenv()
-# hw1 prompt:
+
 async def process_chunk(chunk, start_idx, total_records, model_client, termination_condition):
     """
     處理單一批次資料：
@@ -26,6 +26,7 @@ async def process_chunk(chunk, start_idx, total_records, model_client, terminati
         並將搜尋結果納入建議中。
       - 收集所有回覆訊息並返回。
     """
+    # hw1 prompt:
     # 將資料轉成 dict 格式
     chunk_data = chunk.to_dict(orient='records')
     prompt = (
