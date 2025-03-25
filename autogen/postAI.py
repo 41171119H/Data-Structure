@@ -43,28 +43,30 @@ with sync_playwright() as p:
     page.goto(f"{GITHUB_REPO_URL}/tree/main/autogen")
     page.wait_for_timeout(3000)
 
-    # 點擊 "Add file" 並選擇 "Create new file"
+    # 點擊 "Add file" 按鈕
     try:
         # 等待 "Add file" 按鈕出現並點擊
         page.wait_for_selector("button:has-text('Add file')", timeout=10000)
         page.locator("button:has-text('Add file')").click()
 
-        # 等待 "Create new file" 按鈕出現並點擊
-        page.wait_for_selector("span:has-text('Create new file')", timeout=10000)
-        page.locator("span:has-text('Create new file')").click()
+        # 點擊 "Create new file" 按鈕
+        page.wait_for_selector("a[role='menuitem']:has-text('Create new file')", timeout=10000)
+        page.locator("a[role='menuitem']:has-text('Create new file')").click()
 
         # 等待檔案名稱輸入框出現
         page.wait_for_selector("input[aria-label='File name']", timeout=10000)
         page.fill("input[aria-label='File name']", "Autogen_Learning.md")
 
-        # 等待檔案內容編輯區出現
+        # 等待並確保可以填寫內容
         page.wait_for_selector("div[aria-label='Text editor']", timeout=10000)
-        page.fill("div[aria-label='Text editor']", 
-                  "# Autogen Learning\n\nThis is a Markdown file discussing the **autogen learning** process.")
+        editor = page.locator("div[aria-label='Text editor']").first
 
-        # 點擊提交變更（Commit changes）按鈕
-        page.wait_for_selector("span:has-text('Commit changes')", timeout=10000)
-        page.locator("span:has-text('Commit changes')").click()
+        # 清空編輯區域並輸入內容
+        editor.fill("# Autogen Learning\n\nThis is a Markdown file discussing the **autogen learning** process.")
+
+        # 提交檔案，先填寫 commit 訊息
+        page.fill("input[name='commit-message']", "Add autogen learning Markdown")
+        page.click("span:has-text('Commit changes')")
 
         print("Markdown 檔案已提交！")
         page.screenshot(path="debug_2_after_commit.png")
