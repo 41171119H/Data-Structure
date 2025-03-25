@@ -67,9 +67,14 @@ with sync_playwright() as p:
             delay=50
         )
 
-        # 提交檔案，先填寫 commit 訊息
-        page.fill("input[name='commit-message']", "Add autogen learning Markdown")
-        page.click("span:has-text('Commit changes')")
+        # 等待並點擊第一個提交按鈕 "Commit changes..."
+        page.wait_for_selector("button:has-text('Commit changes...')", timeout=10000)
+        page.locator("button:has-text('Commit changes...')").click()
+
+        # 點擊第二個提交按鈕 "Commit changes"
+        page.wait_for_selector("button[aria-disabled='false']:has-text('Commit changes')", timeout=10000)
+        page.locator("button[aria-disabled='false']:has-text('Commit changes')").click()
+
 
         print("Markdown 檔案已提交！")
         page.screenshot(path="debug_2_after_commit.png")
