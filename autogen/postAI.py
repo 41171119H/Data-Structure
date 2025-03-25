@@ -53,16 +53,19 @@ with sync_playwright() as p:
         page.wait_for_selector("a[role='menuitem']:has-text('Create new file')", timeout=10000)
         page.locator("a[role='menuitem']:has-text('Create new file')").click()
 
-        # 等待檔案名稱輸入框出現
-        page.wait_for_selector("input[aria-label='File name']", timeout=10000)
-        page.fill("input[aria-label='File name']", "Autogen_Learning.md")
+        # 填寫檔案名稱
+        file_name = "Autogen_Learning.md"
+        page.fill("input[aria-label='File name']", file_name)
 
-        # 等待並確保可以填寫內容
-        page.wait_for_selector("div[aria-label='Text editor']", timeout=10000)
-        editor = page.locator("div[aria-label='Text editor']").first
+        # 等待並確保可以填寫內容區域
+        page.wait_for_selector("div.cm-content[contenteditable='true']", timeout=10000)
 
-        # 清空編輯區域並輸入內容
-        editor.fill("# Autogen Learning\n\nThis is a Markdown file discussing the **autogen learning** process.")
+        # 使用 keyboard.type() 輸入內容到編輯區域
+        page.locator("div.cm-content[contenteditable='true']").click()
+        page.keyboard.type(
+            "# Autogen Learning\n\nThis is a Markdown file discussing the **autogen learning** process.",
+            delay=50
+        )
 
         # 提交檔案，先填寫 commit 訊息
         page.fill("input[name='commit-message']", "Add autogen learning Markdown")
