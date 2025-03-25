@@ -26,6 +26,7 @@ async def process_chunk(chunk, start_idx, total_records, model_client, terminati
         並將搜尋結果納入建議中。
       - 收集所有回覆訊息並返回。
     """
+    # hw1 prompt:
     # 將資料轉成 dict 格式
     chunk_data = chunk.to_dict(orient='records')
     prompt = (
