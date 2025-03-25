@@ -43,9 +43,13 @@ with sync_playwright() as p:
     page.goto(f"{GITHUB_REPO_URL}/tree/main/autogen")
     page.wait_for_timeout(3000)
 
-    # 點擊 "Create new file" 按鈕
+    # 點擊 "Add file" 並選擇 "Create new file"
     try:
-        # 等待 "Create new file" 標籤加載完成
+        # 等待 "Add file" 按鈕出現並點擊
+        page.wait_for_selector("button:has-text('Add file')", timeout=10000)
+        page.locator("button:has-text('Add file')").click()
+
+        # 等待 "Create new file" 按鈕出現並點擊
         page.wait_for_selector("span:has-text('Create new file')", timeout=10000)
         page.locator("span:has-text('Create new file')").click()
 
