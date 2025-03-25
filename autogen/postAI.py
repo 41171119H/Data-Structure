@@ -26,7 +26,7 @@ with sync_playwright() as p:
     page.press("#password", "Enter")
 
     # 等待 2FA 驗證
-    print("請手動完成 2FA 驗證，然後按 Enter 繼續...")
+    print("現在需要手動完成 2FA 驗證:")
     input("請手動完成 2FA 驗證，然後按 Enter 繼續...")
 
     # 等待登入完成
@@ -37,30 +37,36 @@ with sync_playwright() as p:
     # 進入指定的 GitHub 倉庫頁面
     page.goto(GITHUB_REPO_URL)
     page.wait_for_timeout(3000)
-    print("進入 GitHub repo")
+    print("進入 GitHub Repo")
 
-    # 進入指定的資料夾，這裡會直接跳到 "Data-Structure/autogen/playwright_output"
-    page.goto(f"{GITHUB_REPO_URL}/tree/main/Data-Structure/autogen/playwright_output")
+    # 檢查資料夾是否存在
+    folder_path = "Data-Structure/autogen/playwright_output"
+    page.goto(f"{GITHUB_REPO_URL}/tree/main/{folder_path}")
     page.wait_for_timeout(3000)
-    print("進入指定資料夾")
 
-    # 點擊 "Add file" 並選擇 "Create new file"
-    page.locator("button:has-text('Add file')").click()
-    page.wait_for_timeout(2000)
-    page.locator("button:has-text('Create new file')").click()
+    # 檢查是否已經進入該資料夾
+    if "404 Not Found" in page.content():
+        print(f"資料夾 {folder_path} 不存在，正在建立...")
 
-    # 填寫 Markdown 檔案名稱及內容
-    file_name = "Autogen_Learning.md"
-    page.fill("input[name='path']", file_name)
-    page.fill("div[aria-label='Text editor'] textarea", 
-              "# Autogen Learning\n\nThis is a Markdown file discussing the **autogen learning** process.")
+        # 點擊 "Add file" 並選擇 "Create new file"
+        page.locator("button:has-text('Add file')").click()
+        page.wait_for_timeout(2000)
+        page.locator("button:has-text('Create new file')").click()
 
-    # 提交檔案，先填寫 commit 訊息
-    page.fill("input[name='commit-message']", "Add autogen learning Markdown")
-    page.click("button:has-text('Commit new file')")
+        # 填寫 Markdown 檔案名稱及內容
+        file_name = "Data-Structure/autogen/playwright_output/Autogen_Learning.md"
+        page.fill("input[name='path']", file_name)
+        page.fill("div[aria-label='Text editor'] textarea", 
+                  "# Autogen Learning\n\nThis is a Markdown file discussing the **autogen learning** process.")
 
-    print("Markdown 檔案已提交！")
-    page.screenshot(path="debug_2_after_commit.png")
+        # 提交檔案，先填寫 commit 訊息
+        page.fill("input[name='commit-message']", "Add autogen learning Markdown")
+        page.click("button:has-text('Commit new file')")
+
+        print("Markdown 檔案已提交！")
+        page.screenshot(path="debug_2_after_commit.png")
+    else:
+        print(f"資料夾 {folder_path} 已存在，直接進入...")
 
     # 保持瀏覽器開啟，方便 Debug
     input("瀏覽器保持開啟，按 Enter 關閉...")
