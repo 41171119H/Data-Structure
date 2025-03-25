@@ -40,11 +40,11 @@ with sync_playwright() as p:
     print("進入 GitHub Repo")
 
     # 檢查資料夾是否存在
-    folder_path = "playwright_output"
-    page.goto(f"{GITHUB_REPO_URL}/tree/main/{folder_path}")
+    folder_path = "Data-Structure/autogen"
+    # page.goto(f"{GITHUB_REPO_URL}/tree/main/Data-Structure")
+    page.goto(f"{GITHUB_REPO_URL}/tree/main/autogen")
     page.wait_for_timeout(3000)
 
-    # 檢查是否已經進入該資料夾
     if "404 Not Found" in page.content():
         print(f"資料夾 {folder_path} 不存在，正在建立...")
 
@@ -54,7 +54,7 @@ with sync_playwright() as p:
         page.locator("button:has-text('Create new file')").click()
 
         # 填寫資料夾路徑和 Markdown 檔案名稱及內容
-        file_name = f"{folder_path}/Autogen_Learning.md"
+        file_name = f"Data-Structure/autogen/Autogen_Learning.md"
         page.fill("input[name='path']", file_name)
         page.fill("div[aria-label='Text editor'] textarea", 
                   "# Autogen Learning\n\nThis is a Markdown file discussing the **autogen learning** process.")
@@ -74,7 +74,7 @@ with sync_playwright() as p:
         page.locator("button:has-text('Create new file')").click()
 
         # 填寫資料夾路徑和 Markdown 檔案名稱及內容
-        file_name = f"{folder_path}/Autogen_Learning.md"
+        file_name = f"Data-Structure/autogen/Autogen_Learning.md"
         page.fill("input[name='path']", file_name)
         page.fill("div[aria-label='Text editor'] textarea", 
                   "# Autogen Learning\n\nThis is a Markdown file discussing the **autogen learning** process.")
