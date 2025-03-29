@@ -68,8 +68,10 @@ python app.py
 http://127.0.0.1:5000/?file=pet_batch_output*.csv
 - *=serial number of natch data. 
 
-# 6. Demo Screenshot
+# 6. Display help instructions
+python pet_analyzer.py help
+
+---
+# Demo Screenshot
 ![Demo](https://github.com/41171119H/Data-Structure/blob/main/autogen/petLoss/petLossDemo.png)
 
-# 7. Display help instructions
-python pet_analyzer.py help
