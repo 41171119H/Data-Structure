@@ -15,6 +15,13 @@
         <input type="text" class="form-control" id="feature_input" name="feature_input" value="{{ request.form.get('feature_input', '') }}">
         <div class="form-text">可輸入走失特徵描述，AI 將幫您找出最可能相符的紀錄。</div>
       </div>
+      
+      <div class="col-12">
+        <label for="search_input" class="form-label">搜尋晶片號碼／寵物名稱</label>
+        <input type="text" class="form-control" id="search_input" name="search_input" value="{{ search_input }}">
+        <div class="form-text">可輸入晶片號碼或寵物名進行搜尋</div>
+      </div>
+      
 
       {% for item in items %}
         <div class="col-md-4">
