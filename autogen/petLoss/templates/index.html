@@ -10,6 +10,12 @@
     <h1 class="mb-4">🐾 走失寵物篩選平台</h1>
 
     <form method="post" class="row g-3 mb-4">
+      <div class="col-12">
+        <label for="feature_input" class="form-label">AI 輔助特徵描述（例如：黑色短毛，尾巴捲曲）</label>
+        <input type="text" class="form-control" id="feature_input" name="feature_input" value="{{ request.form.get('feature_input', '') }}">
+        <div class="form-text">可輸入走失特徵描述，AI 將幫您找出最可能相符的紀錄。</div>
+      </div>
+
       {% for item in items %}
         <div class="col-md-4">
           <label class="form-label">{{ item }}</label>
@@ -20,13 +26,20 @@
           </select>
         </div>
       {% endfor %}
+
       <div class="col-12">
         <button type="submit" class="btn btn-primary">搜尋</button>
       </div>
     </form>
 
-    {% if results.shape[0] > 0 %}
-    <h4>共找到 {{ results.shape[0] }} 筆資料：</h4>
+    {% if recommended_count %}
+      <div class="alert alert-info">
+        🔍 AI 推薦篩選結果，共找到 {{ recommended_count }} 筆可能相符的資料。
+      </div>
+    {% endif %}
+
+    {% if results is not none and results|length > 0 %}
+    <h4>共找到 {{ results|length }} 筆資料：</h4>
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
@@ -41,7 +54,7 @@
         </tr>
       </thead>
       <tbody>
-        {% for _, row in results.iterrows() %}
+        {% for row in results %}
         <tr>
           <td>{{ row['晶片號碼'] }}</td>
           <td>{{ row['完整度分數'] }}</td>
