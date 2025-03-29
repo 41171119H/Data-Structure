@@ -1,0 +1,33 @@
+使用說明總覽：
+
+1. 將 petLoss.csv 分割成每 1000 筆一份  
+指令：python pet_analyzer.py split  
+輸出檔案：loss1.csv、loss2.csv、loss3.csv … 依序
+
+2. 分析所有 loss1.csv ~ loss10.csv  
+指令：python pet_analyzer.py  
+輸出檔案：pet_batch_output1.csv、pet_batch_output2.csv … 依序
+
+3. 僅分析指定檔案（例如 loss1.csv）  
+指令：python pet_analyzer.py loss1.csv  
+輸出檔案：pet_batch_output_loss1.csv
+
+4. 顯示 help 說明內容  
+指令：
+python pet_analyzer.py help  
+或  
+python pet_analyzer.py --help  
+或  
+python pet_analyzer.py -h
+
+5. 啟動網站查詢分析結果  
+指令：python app.py  
+開啟網址：http://127.0.0.1:5000
+
+6. 查看特定分析檔案的結果（會自動與 lossX.csv 合併）  
+網址舉例：http://127.0.0.1:5000/?file=pet_batch_output1.csv  
+也可以改為 pet_batch_output2.csv、pet_batch_output3.csv 等
+
+說明：
+網站會根據 URL 中的檔名參數，搭配對應的 loss 檔案，合併後顯示分析結果與原始內容。
+
