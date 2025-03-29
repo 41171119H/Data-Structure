@@ -51,25 +51,26 @@ Each batch of records is sent to the Gemini API with an instruction to analyze t
 
 ## 🚀 How to Use
 
-```bash
-# 1. Split the main dataset into 1000-record chunks
-python pet_analyzer.py split
+### 1. Split the main dataset into 1000-record chunks
+`python pet_analyzer.py split`
 
-# 2. Analyze all split files automatically
-python pet_analyzer.py
+### 2. Analyze all split files automatically
+`python pet_analyzer.py`
 
-# 3. Analyze a specific file
-python pet_analyzer.py loss1.csv
+### 3. Analyze a specific file
+`python pet_analyzer.py loss1.csv`
 
-# 4. Start the web server
-python app.py
+### 4. Start the web server
+`python app.py`
 
-# 5. Open your browser
-http://127.0.0.1:5000/?file=pet_batch_output*.csv
+### 5. Open your browser
+`http://127.0.0.1:5000/?file=pet_batch_output*.csv`
 - *=serial number of natch data. 
 
-# 6. Demo Screenshot
-![Demo](petLossDemo.png)
+### 6. Display help instructions
+`python pet_analyzer.py help`
 
-# 7. Display help instructions
-python pet_analyzer.py help
+---
+## Demo Screenshot
+![Demo](https://github.com/41171119H/Data-Structure/blob/main/autogen/petLoss/petLossDemo.png)
+
