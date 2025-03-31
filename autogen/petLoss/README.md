@@ -112,13 +112,3 @@ python pet_analyzer.py help
 
 ![Demo](https://github.com/41171119H/Data-Structure/blob/main/autogen/petLoss/petLossDemo.png)
 
----
-
-## 💡 Future Ideas
-
-- Export filtered results
-- Keyword tagging of special features
-- Smart scoring for matching accuracy
-- Integration with pet shelter open data
-
----
