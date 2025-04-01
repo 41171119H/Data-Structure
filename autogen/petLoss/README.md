@@ -112,6 +112,7 @@ python pet_analyzer.py help
 
 ![Demo](https://github.com/41171119H/Data-Structure/blob/main/autogen/petLoss/petLossDemo.png)
 
+<<<<<<< HEAD
 ---
 
 ## 💡 Future Ideas
@@ -121,4 +122,35 @@ python pet_analyzer.py help
 - Smart scoring for matching accuracy
 - Integration with pet shelter open data
 
+---
+
+=======
+>>>>>>> 42b53707ceab4cb08959106cf97eb250bbce1164
+# 🐾 Intrtnet Comment of Pet Shop from Custmors AI Analysis
+
+## 📁 Dataset Description
+The main dataset is in `CSV` format (`pet_store_review.csv`) with the following fields:
+
+- `客戶` (Client)  
+- `留言` (Comment)  
+- `星等` (Score)  
+- `預設分類` (Preset Categories: Positive, Negative)  
+
+## 🧪 How to Use
+
+### Step 1️⃣ –  Start the Code   
+ 
+```bash
+python getPDF.py
+```
+
+### Step 2️⃣ – Open the Server  
+  
+```bash
+http://127.0.0.1:7860
+```
+
+### Step 3️⃣ – Upload Files and Generate the Output file 
+- Upload CSV file in UI 
+- Output file: `report_*datatime_review.csv`
 ---
