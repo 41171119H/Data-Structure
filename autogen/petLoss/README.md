@@ -89,7 +89,7 @@ Analyze a single CSV file:
 ```bash
 python pet_analyzer.py loss1.csv
 ```
-
+![ex](https://github.com/41171119H/Data-Structure/blob/main/autogen/petLoss/ex.png)
 ### Step 4️⃣ – Start the Flask Web App  
 ```bash
 python app.py
@@ -105,14 +105,13 @@ http://127.0.0.1:5000/?file=pet_batch_output*.csv
 ```bash
 python pet_analyzer.py help
 ```
-![ex](https://github.com/41171119H/Data-Structure/blob/main/autogen/petLoss/ex.png)
+
 ---
 
 ## 🖼️ Demo Screenshot
 
 ![Demo](https://github.com/41171119H/Data-Structure/blob/main/autogen/petLoss/petLossDemo.png)
 
-<<<<<<< HEAD
 ---
 
 ## 💡 Future Ideas
@@ -124,8 +123,6 @@ python pet_analyzer.py help
 
 ---
 
-=======
->>>>>>> 42b53707ceab4cb08959106cf97eb250bbce1164
 # 🐾 Intrtnet Comment of Pet Shop from Custmors AI Analysis
 
 ## 📁 Dataset Description
@@ -153,4 +150,4 @@ http://127.0.0.1:7860
 ### Step 3️⃣ – Upload Files and Generate the Output file 
 - Upload CSV file in UI 
 - Output file: `report_*datatime_review.csv`
----
+
