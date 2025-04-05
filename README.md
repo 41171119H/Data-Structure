@@ -17,7 +17,8 @@ The code for the Data Structure course in the TAHRD
 - 專案名稱: [走失寵物篩選平台](https://github.com/41171119H/Data-Structure/tree/main/autogen/petLoss#-lost-pet-dataset-ai-analysis--search-platform)
 
 ## hw3
-- 請 `postAI_README.py` 自動撰寫檔案的README檔案
+- 請 `postAI_README.py` 自動撰寫檔案的README檔案 [檔案位置](https://github.com/41171119H/Data-Structure/tree/main/autogen/postAI_README.py)
+- 使用 `Playwright` 自動撰寫 README.md 檔案
 ## hw4
 - 應用 `getPDF.py` 將分析 csv 檔案結果生成 pdf 檔
 - 作業內容: 分析顧客網路留言評價並生成表格 pdf 檔案
