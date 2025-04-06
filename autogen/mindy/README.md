@@ -34,7 +34,7 @@ pip install flask flask-cors
 
 #### Run Backend:
 ```bash
-python mindy_backend.py
+python backend.py
 ```
 > The Flask server will run at `http://127.0.0.1:5000`
 
