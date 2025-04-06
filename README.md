@@ -18,7 +18,7 @@ The code for the Data Structure course in the TAHRD
 
 ## hw3
 - 請 `postAI_README.py` 自動撰寫檔案的README檔案 [檔案位置](https://github.com/41171119H/Data-Structure/tree/main/autogen/postAI_README.py)
-- 使用 `Playwright` 自動撰寫 README.md 檔案 [自動生成之README](https://github.com/41171119H/Data-Structure/tree/main/autogen/post)
+- 使用 `Playwright` 自動撰寫 README.md 檔案 [自動生成之README](https://github.com/41171119H/Data-Structure/tree/main/autogen/post/README.md)
 - 執行過程:
 
   ![image](https://github.com/user-attachments/assets/024ea467-0274-4476-8d98-986909517d6e)
