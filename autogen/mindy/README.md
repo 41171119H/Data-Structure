@@ -92,9 +92,7 @@ npm run dev
 ---
 
 ## 🧑‍💻 Author
-Created by [Your Name] - AI dashboard project for personal development
+Created by YunZhen Yang(楊芸蓁) - AI dashboard project for personal development
 
----
 
-Feel free to customize and extend MINDY as your personal life assistant!
 
