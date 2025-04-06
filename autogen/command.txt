@@ -13,7 +13,7 @@ http://localhost:8080
 
 ---
 **new_env**:
-& "C:\Users\jilly\PycharmProjects\1015\.venv\Scripts\python.exe" -m venv new_env
+
 .\new_env\Scripts\activate
 
 pip install -U autogen-agentchat autogen-ext[openai,web-surfer] python-dotenv playwright
