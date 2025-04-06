@@ -15,7 +15,7 @@ The code for the Data Structure course in the TAHRD
 ## hw2
 - 實現 DRai 批次處理資料與分析結果之實作
 - 專案名稱: [走失寵物篩選平台](https://github.com/41171119H/Data-Structure/tree/main/autogen/petLoss#-lost-pet-dataset-ai-analysis--search-platform)
-- [主程式碼說明](https://github.com/41171119H/Data-Structure/tree/main/autogen/petLoss#go-to-link%EF%B8%8F)
+- [主程式碼](https://github.com/41171119H/Data-Structure/blob/main/autogen/petLoss/pet_analyzer.py)
 
 ## hw3
 - 請 `postAI_README.py` 自動撰寫檔案的README檔案 [檔案位置](https://github.com/41171119H/Data-Structure/tree/main/autogen/postAI_README.py)
