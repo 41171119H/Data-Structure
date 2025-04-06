@@ -1,4 +1,4 @@
-```markdown
+
 # Autogen README Generator
 This script automates the generation and publishing of `README.md` files to a GitHub repository using Autogen and Playwright.
 ## Key Features
@@ -16,4 +16,4 @@ This script automates the generation and publishing of `README.md` files to a Gi
 - The script assumes the user has the necessary permissions to modify the specified GitHub repository.
 ```bash
 python <your_script>.py
-```
+
