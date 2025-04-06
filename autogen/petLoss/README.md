@@ -72,7 +72,8 @@ Built with Flask, the web interface provides:
 
 ## 🧪 How to Use
 
-### Step 1️⃣ – Split the Dataset  
+### Step 1️⃣ – Split the Dataset
+#### [Go to Link↗️](https://github.com/41171119H/Data-Structure/blob/main/autogen/petLoss/pet_analyzer.py)
 Split the original file into chunks of 1000 records:  
 ```bash
 python pet_analyzer.py split
@@ -136,6 +137,7 @@ The main dataset is in `CSV` format (`pet_store_review.csv`) with the following 
 ## 🧪 How to Use
 
 ### Step 1️⃣ –  Start the Code   
+#### [Go to Link↗️](https://github.com/41171119H/Data-Structure/blob/main/autogen/petLoss/getPDF.py)
  
 ```bash
 python getPDF.py
