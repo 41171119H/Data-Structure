@@ -1,98 +1,102 @@
 # MINDY - Mindful Intelligent Navigator for Daily You
 
-MINDY is a personal self-improvement assistant that offers a daily dashboard combining AI-powered interview practice, study tracking, reminders, savings goals, and digest summaries.
+MINDY is a personal self-improvement assistant that provides a dashboard for daily summaries, reminders, interview practice, study progress, and savings tracking.
 
 ---
 
-## 🌐 Project Structure
+## 📁 Project Structure
 
 ```
-/mindy
-├── mindy_dashboard.jsx       # Frontend React Dashboard (ShadCN + Recharts)
-├── mindy_backend.py          # Flask backend API with mock data
-└── README.md                 # This instruction file
+MINDY/
+├── backend.py             # Flask backend server with API endpoints
+├── mindy_dashboard.jsx    # React component for the UI dashboard
+├── prototype.md           # Project planning and notes
+└── README.md              # Project instructions (this file)
 ```
+
+---
+
+## ⚙️ Requirements
+
+### Backend:
+- Python 3.8+
+- Flask
+- Flask-CORS
+
+### Frontend:
+- Node.js v16+ (you have v20, perfect!)
+- npm (you have v10+)
+- React with Vite setup
+- recharts (for chart rendering)
 
 ---
 
 ## 🚀 How to Run the Project
 
-### 1. Backend Setup (Flask)
+### 1. Start Backend (Flask)
 
-#### Requirements:
-- Python 3.8+
-- Flask
-- Flask-CORS
-
-#### Installation:
 ```bash
-cd mindy
+cd MINDY
 python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
+venv\Scripts\activate     # Windows 用戶
 pip install flask flask-cors
-```
-
-#### Run Backend:
-```bash
 python backend.py
 ```
-> The Flask server will run at `http://127.0.0.1:5000`
+
+The backend server will run at:  
+📡 `http://127.0.0.1:5000`
 
 ---
 
-### 2. Frontend Setup (React + Vite or Next.js)
-
-#### Requirements:
-- Node.js (v16+ recommended)
-- pnpm / npm / yarn
-
-#### Steps:
-If you already have a React project, place `mindy_dashboard.jsx` inside your pages or components folder. Otherwise, create a new project:
+### 2. Set Up Frontend (React + Vite)
 
 ```bash
 npm create vite@latest mindy-dashboard -- --template react
 cd mindy-dashboard
 npm install
-```
-
-#### Add ShadCN UI + Tailwind:
-Follow setup guide at https://ui.shadcn.dev/docs/installation/react
-
-#### Add Required Libraries:
-```bash
 npm install recharts
 ```
 
-#### Replace or import `MindyDashboard`:
-Place `mindy_dashboard.jsx` in your `src/components` and render it in `App.jsx` or your route file.
+將 `mindy_dashboard.jsx` 放到 `src/components/` 目錄下，並在 `App.jsx` 引入：
 
-#### Run Frontend:
+```jsx
+import MindyDashboard from './components/mindy_dashboard';
+
+function App() {
+  return <MindyDashboard />;
+}
+```
+
+然後執行：
 ```bash
 npm run dev
 ```
-> React app will run at `http://localhost:5173` or similar
+開啟瀏覽器進入：  
+🌐 `http://localhost:5173`
 
 ---
 
-## 🧠 Features
-- Daily News Summary using mock API
-- Editable Reminder Checklist
-- AI Interview Practice UI
-- Visualized Study Progress Chart
-- Savings Goal Progress with live update
+## 📦 Features
+- 🌤 Daily AI Digest Summary
+- 📝 Reminder Checklist (static for now)
+- 💬 Mock Interview UI
+- 📊 Study Progress BarChart
+- 💰 Savings Jar with live progress
 
 ---
 
-## 📦 Next Steps
-- Add connection to real AI (e.g., Gemini or OpenAI API)
-- Persist data to a database
-- Add login / profile system
-- Export daily report to PDF
+## 🛠️ Next Goals
+- [ ] 接上 AutoGen / Gemini API 回答面試問題
+- [ ] Reminders 可編輯與持久化
+- [ ] 匯出 PDF 報表
+- [ ] 使用者登入與個人化體驗
 
 ---
 
 ## 🧑‍💻 Author
-Created by YunZhen Yang(楊芸蓁) - AI dashboard project for personal development
+Developed by YunZhen Yang (楊芸蓁) using Flask + React + ShadCN UI
+
+For academic, personal growth, and full-stack portfolio development.
 
 
 
