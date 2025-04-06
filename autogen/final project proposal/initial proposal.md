@@ -1,6 +1,6 @@
 # Project Proposal: MINDY — Mindful Intelligent Navigator for Daily You
 
-
+---
 
 ## 🌟 Project Name: **MINDY**
 
@@ -28,8 +28,9 @@ The project aims to unify AI agents, automation tools, and a responsive dashboar
 | **2. Smart Reminders**  | Allows users to set custom learning or self-care routines (e.g., reading, exercise, meditation). Alerts and logs are shown on the dashboard. |
 | **3. Interview Coach**  | AI-powered mock interview system using AutoGen. Simulates HR/technical/stress interviewers and provides personalized feedback. |
 | **4. Student Assistant**| Enables uploading study schedules or CSV files with progress, then analyzes weak spots or uncompleted topics. |
-| **5. Dashboard View**   | Combines all modules in a centralized web interface built with Flask and Bootstrap. Charts and cards visualize progress and suggestions. |
-| **6. PDF Report Export**| Generates a daily self-improvement report as a downloadable PDF summary. |
+| **5. Saving Jar**       | Users can define savings goals and track their progress visually. Encourages small daily habits toward financial wellness. |
+| **6. Dashboard View**   | Combines all modules in a centralized web interface built with Flask and Bootstrap. Charts and cards visualize progress and suggestions. |
+| **7. PDF Report Export**| Generates a daily self-improvement report as a downloadable PDF summary. |
 
 ---
 
@@ -54,8 +55,9 @@ The project aims to unify AI agents, automation tools, and a responsive dashboar
 | **Phase 3: Smart Reminders** | Add task management UI and backend trigger logic |
 | **Phase 4: Interview Assistant** | Implement AutoGen role-based simulation and result display |
 | **Phase 5: Student Tracker** | Enable CSV upload + analysis + visualization |
-| **Phase 6: PDF Generator** | Export daily summary into a downloadable report |
-| **Phase 7: UI Polish & Deployment** | Add responsive design, refine UX, and deploy locally or online |
+| **Phase 6: Saving Jar Module** | Implement savings goal setting, visual progress tracker |
+| **Phase 7: PDF Generator** | Export daily summary into a downloadable report |
+| **Phase 8: UI Polish & Deployment** | Add responsive design, refine UX, and deploy locally or online |
 
 ---
 
@@ -67,16 +69,19 @@ flowchart TD
     A --> B2[Trigger AI Interview Practice]
     A --> B3[Upload Study CSV]
     A --> B4[Fetch Daily News]
+    A --> B5[Set Saving Goal]
 
     B1 --> C1[Task Scheduler]
     B2 --> C2[AutoGen Role-Based Q&A]
     B3 --> C3[CSV Analysis + Weak Point Summary]
     B4 --> C4[Playwright Scraper + AutoGen Summarizer]
+    B5 --> C5[Progress Tracker for Saving Jar]
 
     C1 --> D[Dashboard Logs]
     C2 --> D
     C3 --> D
     C4 --> D
+    C5 --> D
 
     D --> E[PDF Report Generation]
     E --> F[Downloadable PDF Report]
