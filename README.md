@@ -24,7 +24,7 @@ The code for the Data Structure course in the TAHRD
 
   ![image](https://github.com/user-attachments/assets/024ea467-0274-4476-8d98-986909517d6e)
 
-## hw4 [🔗](https://github.com/41171119H/Data-Structure/tree/main/autogen/petLoss#-intrtnet-comment-of-pet-shop-from-custmors-ai-analysis))
+## hw4 [🔗](https://github.com/41171119H/Data-Structure/tree/main/autogen/petLoss#-intrtnet-comment-of-pet-shop-from-custmors-ai-analysis)
 - 應用 `getPDF.py` 將分析 csv 檔案結果生成 pdf 檔
 - 作業內容: 分析顧客網路留言評價並生成表格 pdf 檔案
 - [說明](https://github.com/41171119H/Data-Structure/tree/main/autogen/petLoss#-intrtnet-comment-of-pet-shop-from-custmors-ai-analysis)
