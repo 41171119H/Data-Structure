@@ -18,3 +18,11 @@ http://localhost:8080
 
 pip install -U autogen-agentchat autogen-ext[openai,web-surfer] python-dotenv playwright
 playwright install
+
+---
+python -m venv pet_env
+
+.\pet_env\Scripts\activate
+
+pip install google-generativeai gradio pandas fpdf2 python-dotenv
+

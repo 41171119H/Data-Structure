@@ -1,3 +1,4 @@
+
 import os
 from datetime import datetime
 import requests
@@ -5,7 +6,8 @@ import gradio as gr
 import pandas as pd
 from dotenv import load_dotenv
 from fpdf import FPDF
-from google import genai
+# from google import genai
+import google.generativeai as genai
 import re
 
 import warnings
@@ -13,8 +15,10 @@ warnings.filterwarnings("ignore", message="cmap value too big/small:*")
 
 # 載入環境變數並設定 API 金鑰
 load_dotenv()
-api_key = os.getenv("GEMINI_API_KEY")
-client = genai.Client(api_key=api_key)
+# api_key = os.getenv("GEMINI_API_KEY")
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+# client = genai.Client(api_key=api_key)
+model = genai.GenerativeModel("gemini-pro")
 
 
 def get_chinese_font_file() -> str:
@@ -281,10 +285,13 @@ def gradio_handler(csv_file, user_prompt):
                       f"{block_csv}\n\n請根據以下規則進行分析並產出報表：\n{user_prompt}")
             print("完整 prompt for block:")
             print(prompt)
+            '''
             response = client.models.generate_content(
                 model="gemini-2.5-pro-exp-03-25",
                 contents=[prompt]
             )
+            '''
+            response = model.generate_content(prompt)
             block_response = response.text.strip()
             cumulative_response += f"區塊 {i//block_size+1}:\n{block_response}\n\n"
             block_responses.append(cumulative_response)
