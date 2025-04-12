@@ -4,8 +4,8 @@
 
 ![image](https://github.com/41171119H/Data-Structure/blob/main/autogen/autogen.drawio.png)
 
-- batch processed data : [food_addi.csv](https://github.com/41171119H/Data-Structure/blob/main/hw1/food_addi.csv)
-- code : [dataAgent_foodaddi.py](https://github.com/41171119H/Data-Structure/blob/main/hw1/dataAgent_foodaddi.py)
+- batch processed data : [food_addi.csv](https://github.com/41171119H/Data-Structure/blob/main/autogen/food_addi.csv)
+- code : [dataAgent_foodaddi.py](https://github.com/41171119H/Data-Structure/blob/main/autogen/dataAgent_foodaddi.py)
 - environment: - [Python 3.x](https://www.python.org/downloads/)
 1. Install the necessary dependencies:
 ```
