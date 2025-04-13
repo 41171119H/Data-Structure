@@ -31,7 +31,7 @@ The code for the Data Structure course in the TAHRD
 - 主程式碼[↗️](https://github.com/41171119H/Data-Structure/blob/main/autogen/petLoss/getPDF2.py)
 
 ---
-實作2: Final Project中的 [`interview_analysis.py`]()
+實作2: Final Project中的 [`interview_analysis.py`](https://github.com/YunzhenYang-collection/Data-Structure_Final-Project/blob/main/mindy/mindy_flask/models/interview_analysis.py)
 分析對話逐字稿並給出建議
 
 ## Final Project
