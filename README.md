@@ -30,6 +30,16 @@ The code for the Data Structure course in the TAHRD
 - 說明: [Intrtnet Comment of Pet Shop from Custmors AI Analysis](https://github.com/41171119H/Data-Structure/tree/main/autogen/petLoss#-intrtnet-comment-of-pet-shop-from-custmors-ai-analysis)
 - 主程式碼[↗️](https://github.com/41171119H/Data-Structure/blob/main/autogen/petLoss/getPDF2.py)
 
+---
+- **實作II**: Final Project中的 [`interview_analysis.py`](https://github.com/YunzhenYang-collection/Data-Structure_Final-Project/blob/main/mindy/mindy_flask/models/interview_analysis.py)
+分析對話逐字稿並給出建議
+
+## hw5
+- 將autogen專案加上前端互動頁面:
+  -  **實作I**: hw2 當中的 [走失寵物篩選平台](https://github.com/41171119H/Data-Structure/tree/main/autogen/petLoss#%EF%B8%8F-demo-screenshot)
+    
+  -  **實作II**: Final Project 中的 Dashboard
+
 ## Final Project
 #### Repo Link: [![github-logo](https://github.com/user-attachments/assets/1f81ff1c-16c0-40f2-8595-5a1225d25835)](https://github.com/YunzhenYang-collection/Data-Structure_Final-Project)
 
